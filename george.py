@@ -162,5 +162,3 @@ bestMove = findBestMove(board)
 
 print("The Optimal Move is :")
 print("ROW:", bestMove[0], " COL:", bestMove[1])
-
-# This code is contributed by divyesh072019

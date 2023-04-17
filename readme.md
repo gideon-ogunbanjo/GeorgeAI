@@ -2,35 +2,35 @@
 # Overview:
 ## How GeorgeAI Works
 
-GeorgeAI is programmed to analyze the current state of the board and calculate the best possible move. It uses a neural network model to predict the outcome of each possible move and selects the move that will result in the highest chance of winning.
+GeorgeAI is a model designed to play Tic Tac Toe optimally, considering all possible scenarios to make the most optimal move. It is built using Python and several popular machine learning libraries, including Numpy and Scipy.
 
-## findBestMove() Function
+### Game Rules
+Tic Tac Toe is a two-player game played on a 3x3 grid board. The game starts with an empty board and players take turns to place their mark ('X' or 'O') on an empty cell. The first player to place three of their marks in a row (horizontally, vertically, or diagonally) wins the game. If all cells are filled without any player winning, the game is drawn.
 
-The findBestMove() function is a new addition to GeorgeAI's programming. It is designed to find the best possible move in the current state of the board. The function considers all possible scenarios and evaluates the outcome of each move using the neural network model.
+### Model Architecture
+GeorgeAI uses a minimax algorithm to find the most optimal move in each turn of the game. Minimax is a decision-making algorithm that is used to minimize the possible loss for a worst-case scenario. In Tic Tac Toe, this means that GeorgeAI considers all possible moves that could be made by the opponent and selects the move that minimizes the maximum possible loss.
 
-## How to Use GeorgeAI
+To further optimize the minimax algorithm, GeorgeAI uses alpha-beta pruning, a search algorithm that reduces the number of nodes that need to be evaluated in the minimax algorithm. This reduces the computational cost of evaluating the game tree, making it possible to play Tic Tac Toe optimally in real-time.
 
-To use GeorgeAI, simply call the findBestMove() function and pass in the current state of the board. The function will return the best possible move.
+The Pseudo code is as follows:
 
-```python
-# Example usage
-from georgeai import findBestMove
+function findBestMove(board):
+    bestMove = NULL
+    for each move in board :
+        if current move is better than bestMove
+            bestMove = current move
+    return bestMove
 
-board = [
-    ['X', 'O', ' '],
-    [' ', 'X', 'O'],
-    ['O', ' ', 'X']
-]
+### Usage
+To use GeorgeAI to play Tic Tac Toe, follow these steps:
 
-best_move = findBestMove(board)
+Load the Tic Tac Toe board into Python using a suitable method.
+Define which player is going to start the game.
+Call the get_optimal_move() function, passing in the current state of the board and the current player.
+The function will return the most optimal move for the current player to make.
+Update the Tic Tac Toe board with the optimal move, and repeat steps 3-5 until the game is won, drawn or lost.
 
-print(f"The best move is {best_move}")
 
-```
-
-## Conclusion
-
-GeorgeAI is a powerful AI designed to play Tic Tac Toe at an expert level. With the addition of the findBestMove() function, it is now even more efficient and effective at selecting the best possible move.
 
 ## Tools Used:
 VSCode, Git, GitHub, Python.
