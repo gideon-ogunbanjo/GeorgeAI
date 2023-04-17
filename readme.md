@@ -20,7 +20,7 @@ The Pseudo code is as follows:
         if current move is better than bestMove
             bestMove = current move
     return bestMove
-    ```
+```
 
 ### Usage
 To use GeorgeAI to play Tic Tac Toe, follow these steps:
