@@ -13,13 +13,14 @@ GeorgeAI uses a minimax algorithm to find the most optimal move in each turn of 
 To further optimize the minimax algorithm, GeorgeAI uses alpha-beta pruning, a search algorithm that reduces the number of nodes that need to be evaluated in the minimax algorithm. This reduces the computational cost of evaluating the game tree, making it possible to play Tic Tac Toe optimally in real-time.
 
 The Pseudo code is as follows:
-
-function findBestMove(board):
+```
+ function findBestMove(board):
     bestMove = NULL
     for each move in board :
         if current move is better than bestMove
             bestMove = current move
     return bestMove
+    ```
 
 ### Usage
 To use GeorgeAI to play Tic Tac Toe, follow these steps:
