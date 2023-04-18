@@ -50,7 +50,7 @@ def evaluate(b) :
 	# Else if none of them have won then return 0
 	return 0
 
-# This is the minimax function. It considers all
+# This is the MinMax function. It considers all
 # the possible ways the game can go and returns
 # the value of the board
 def minimax(board, depth, isMax) :
